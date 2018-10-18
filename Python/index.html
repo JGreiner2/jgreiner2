@@ -7,57 +7,64 @@
     <a href="../index.html">go back</a>
         
     <textarea rows="25" cols="100">
-        from random import randint
+from random import randint
 
-        #Decide Computer Play Part 1
-        c_rps = ("Rock", "Paper", "Scissors")
-        
-        #start loop
-        h_play = 'Play'
-        while h_play == 'Play':
-        
-          #Decide Computer Play Part 2
-          c_play = c_rps[randint(0,2)]
-        
-          #Get Human Play
-          h_play = input ('Rock, Paper, or Scissors?')
-        
-          #Decide winner and losser
-        
-            #tie
-          if h_play == c_play:
-            print ('Computer also plays ' + c_play + ', you tie.')
-        
-            #human Paper
-          elif h_play == "Paper":
-            if c_play == "Scissors":
+#Decide Computer Play Part 1
+c_rps = ("Rock", "Paper", "Scissors")
+
+#start loop
+h_play = 'Play'
+while h_play == 'Play':
+
+  #Decide Computer Play Part 2
+  c_play = c_rps[randint(0,2)]
+
+  #Get Human Play
+  h_play = input ('Rock, Paper, or Scissors?')
+
+  print ()
+
+  #Decide winner and losser
+
+    #tie
+        if h_play == c_play:
+         print ('Computer also plays ' + c_play + ', you tie.')
+
+    #human Paper
+        elif h_play == "Paper":
+         if c_play == "Scissors":
+             print ('Computer plays ' + c_play + ', you lose :(')
+         else:
+             print ('Computer plays ' + c_play + ', you win!')
+
+    #human Rock
+        elif h_play == "Rock":
+        if c_play == "Paper":
+             print ('Computer plays ' + c_play + ', you lose :(')
+        else:
+             print ('Computer plays ' + c_play + ', you win!')
+
+    #human Scissors
+        elif h_play == "Scissors":
+        if c_play == "Rock":
               print ('Computer plays ' + c_play + ', you lose :(')
-            else:
+         else:
               print ('Computer plays ' + c_play + ', you win!')
-        
-            #human Rock
-          elif h_play == "Rock":
-            if c_play == "Paper":
-              print ('Computer plays ' + c_play + ', you lose :(')
-            else:
-              print ('Computer plays ' + c_play + ', you win!')
-        
-            #human Scissors
-          elif h_play == "Scissors":
-            if c_play == "Rock":
-              print ('Computer plays ' + c_play + ', you lose :(')
-            else:
-              print ('Computer plays ' + c_play + ', you win!')
-        
-            #If human typed wrong thing
-          else:
-            print ('Invalid move, please type "Rock", "Paper", or "Scissors" to play.')
-        
-        #play again or end loop
-          again = input ('Again? (y/n)')
-        
-          if again == 'y':
-            h_play = 'Play'
+
+    #If human typed wrong thing
+         else:
+              print ('Invalid move, please type "Rock", "Paper", or "Scissors" to play.')
+
+         print ()
+
+#play again or end loop
+  again = input ('Again? (y/n)')
+
+  print ()
+
+  if again == 'y':
+    h_play = 'Play'
+
 
     </textarea>
         
